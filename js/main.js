@@ -27,5 +27,8 @@ createApp({
       if (check === true) return 'text-decoration-line-through';
       else return 'text-decoration-none';
     },
+    removeTodo(index) {
+      this.todos.splice(index, 1);
+    },
   },
 }).mount('#app');
