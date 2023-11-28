@@ -23,10 +23,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="app" class="container">
-      <h1 class="text-center my-5">Todo list</h1>
+    <div id="app" class="container" v-cloak>
       <div class="row">
+        <h1 class="text-center my-5">Todo list</h1>
         <div class="col col-md-9 mx-auto">
+          <label for="new-todo" class="mb-2">Inserisci un nuovo todo</label>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="New todo"
+              aria-describedby="button-addon2"
+              v-model="newTodo"
+              id="new-todo"
+            />
+            <button
+              class="btn btn-primary"
+              type="button"
+              id="button-addon2"
+              @click="addTodo"
+            >
+              Aggiungi
+            </button>
+          </div>
           <ul class="list-group">
             <li
               v-for="(todo, index) in todos"
