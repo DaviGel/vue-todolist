@@ -27,14 +27,17 @@ createApp({
     checkStatus(check) {
       if (check === true) return 'text-decoration-line-through';
     },
+
     removeTodo(index) {
       this.todos.splice(index, 1);
     },
+
     addTodo() {
       if (this.newTodo.trim() === '') return;
       else this.todos.push({ text: this.newTodo, done: false });
       this.newTodo = null;
     },
+
     doneModifier(index) {
       this.todos[index].done
         ? (this.todos[index].done = false)
