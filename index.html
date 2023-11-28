@@ -31,11 +31,12 @@
           <div class="input-group mb-3">
             <input
               type="text"
-              class="form-control"
+              class="form-control shadow-none"
               placeholder="New todo"
               aria-describedby="button-addon2"
               v-model="newTodo"
               id="new-todo"
+              @keyup.enter="addTodo"
             />
             <button
               class="btn btn-primary"

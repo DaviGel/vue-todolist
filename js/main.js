@@ -26,13 +26,13 @@ createApp({
   methods: {
     checkStatus(check) {
       if (check === true) return 'text-decoration-line-through';
-      else return 'text-decoration-none';
     },
     removeTodo(index) {
       this.todos.splice(index, 1);
     },
     addTodo() {
-      this.todos.push({ text: this.newTodo, done: false });
+      if (this.newTodo.trim() === '') return;
+      else this.todos.push({ text: this.newTodo, done: false });
       this.newTodo = null;
     },
   },
