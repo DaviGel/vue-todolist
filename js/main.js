@@ -35,5 +35,10 @@ createApp({
       else this.todos.push({ text: this.newTodo, done: false });
       this.newTodo = null;
     },
+    doneModifier(index) {
+      this.todos[index].done
+        ? (this.todos[index].done = false)
+        : (this.todos[index].done = true);
+    },
   },
 }).mount('#app');

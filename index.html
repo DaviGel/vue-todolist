@@ -54,7 +54,9 @@
               :class="checkStatus(todo.done)"
             >
               <div class="d-flex justify-content-between">
-                {{ index + 1 }} - {{ todo.text }}
+                <div role="button" class="text" @click="doneModifier(index)">
+                  {{ index + 1 }} - {{ todo.text }}
+                </div>
                 <i
                   role="button"
                   class="fa-solid fa-trash-can"
