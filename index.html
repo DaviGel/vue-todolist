@@ -52,11 +52,13 @@
               v-for="(todo, index) in todos"
               class="list-group-item"
               :class="checkStatus(todo.done)"
+              v-if="todos.length > 0"
             >
               <div class="d-flex justify-content-between">
                 <div role="button" class="text" @click="doneModifier(index)">
                   {{ index + 1 }} - {{ todo.text }}
                 </div>
+
                 <i
                   role="button"
                   class="fa-solid fa-trash-can"
@@ -64,6 +66,9 @@
                 ></i>
               </div>
             </li>
+            <div v-else class="alert alert-info" role="alert">
+              Non ci sono todo in lista
+            </div>
           </ul>
         </div>
       </div>
