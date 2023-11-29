@@ -34,7 +34,7 @@ createApp({
 
     addTodo() {
       if (this.newTodo.trim() === '') return;
-      else this.todos.push({ text: this.newTodo, done: false });
+      this.todos.push({ text: this.newTodo, done: false });
       this.newTodo = null;
     },
 
