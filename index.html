@@ -27,6 +27,7 @@
       <div class="row">
         <h1 class="text-center my-5">Todo list</h1>
         <div class="col col-md-9 mx-auto">
+          <!-- Inserisci un task -->
           <label for="new-todo" class="mb-2">Inserisci un nuovo todo</label>
           <div class="input-group mb-3">
             <input
@@ -47,6 +48,8 @@
               Aggiungi
             </button>
           </div>
+          <!-- /Inserisci un task -->
+          <!-- Stampa i task in pagina -->
           <ul class="list-group" v-if="todos.length > 0">
             <li
               class="list-group-item"
@@ -65,9 +68,12 @@
               </div>
             </li>
           </ul>
+          <!-- /Stampa i task in pagina -->
+          <!-- Task non disponibili -->
           <div v-else class="alert alert-info" role="alert">
             Non ci sono todo in lista
           </div>
+          <!-- /Task non disponibili -->
         </div>
       </div>
     </div>
