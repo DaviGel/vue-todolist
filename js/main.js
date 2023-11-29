@@ -39,9 +39,10 @@ createApp({
     },
 
     doneModifier(index) {
-      this.todos[index].done
-        ? (this.todos[index].done = false)
-        : (this.todos[index].done = true);
+      // this.todos[index].done
+      //   ? (this.todos[index].done = false)
+      //   : (this.todos[index].done = true);
+      this.todos[index].done = !this.todos[index].done;
     },
   },
 }).mount('#app');
